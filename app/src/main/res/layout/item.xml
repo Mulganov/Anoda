@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F5F5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#656565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/user_photo"
+        app:layout_constraintTop_toTopOf="@+id/user_photo" />
+
+    <TextView
+        android:id="@+id/user_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/user_photo"
+        app:layout_constraintStart_toStartOf="@+id/user_name" />
+
+    <ImageView
+        android:id="@+id/settings"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/user_photo"
+        app:srcCompat="@drawable/ic_menu" />
+
+    <ImageView
+        android:id="@+id/lenta_main_photo"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_location"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lenta_main_photo"
+        app:srcCompat="@drawable/ic_like" />
+
+    <ImageView
+        android:id="@+id/coments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@+id/like"
+        app:layout_constraintTop_toTopOf="@+id/like"
+        app:srcCompat="@drawable/ic_coment" />
+
+    <ImageView
+        android:id="@+id/direct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@+id/coments"
+        app:layout_constraintTop_toTopOf="@+id/coments"
+        app:srcCompat="@drawable/ic_direct" />
+
+    <ImageView
+        android:id="@+id/flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lenta_main_photo"
+        app:srcCompat="@drawable/ic_flag" />
+
+    <TextView
+        android:id="@+id/likes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/flag"
+        app:layout_constraintStart_toStartOf="@+id/like"
+        app:layout_constraintTop_toBottomOf="@+id/like" />
+
+    <TextView
+        android:id="@+id/tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/likes"
+        app:layout_constraintStart_toStartOf="@+id/likes"
+        app:layout_constraintTop_toBottomOf="@+id/likes" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/tags"
+        app:layout_constraintTop_toBottomOf="@+id/tags" />
+</androidx.constraintlayout.widget.ConstraintLayout>
